@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/mathQuiz"
+        android:name="org.sheridan.adhrika991451940.MathQuiz"
+        android:label="fragment_math_quiz"
+        tools:layout="@layout/fragment_math_quiz" >
+        <action
+            android:id="@+id/action_mathQuiz_to_congrats"
+            app:destination="@id/congrats" />
+        <action
+            android:id="@+id/action_mathQuiz_to_gameOver"
+            app:destination="@id/gameOver" />
+    </fragment>
+    <fragment
+        android:id="@+id/congrats"
+        android:name="org.sheridan.adhrika991451940.Congrats"
+        android:label="fragment_congrats"
+        tools:layout="@layout/fragment_congrats" >
+        <action
+            android:id="@+id/action_congrats_to_mathQuiz"
+            app:destination="@id/mathQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOver"
+        android:name="org.sheridan.adhrika991451940.GameOver"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOver_to_mathQuiz"
+            app:destination="@id/mathQuiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="org.sheridan.adhrika991451940.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_mathQuiz"
+            app:destination="@id/mathQuiz" />
+    </fragment>
+</navigation>
